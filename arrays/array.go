@@ -1,5 +1,9 @@
 package arrays
 
+import (
+	"sort"
+)
+
 // CyclicRotation means that each element in array is shifted right by one index,
 // and the last element of the array is moved to the first place. For example,
 // the rotation of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7]
@@ -21,4 +25,24 @@ func CyclicRotation(A []int, K int) []int {
 		result[(i+shift)%lengthA] = A[i]
 	}
 	return result
+}
+
+// OddOccurrencesInArray A non-empty array A consisting of N integers is given.
+// The array contains an odd number of elements,
+// and each element of the array can be paired with another element that has the same value,
+// except for one element that is left unpaired.
+func OddOccurrencesInArray(A []int) int {
+	sort.Ints(A)
+	pre := 0
+	for i := 0; i < len(A); i++ {
+		if i%2 == 1 {
+			pre -= A[i]
+			if pre != 0 {
+				return A[i-1]
+			}
+		} else {
+			pre = A[i]
+		}
+	}
+	return pre
 }
