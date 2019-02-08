@@ -13,7 +13,6 @@ func TestFrogJump(t *testing.T) {
 		args args
 		want int
 	}{
-		// TODO: Add test cases.
 		{"Test 1", args{10, 85, 30}, 3},
 	}
 	for _, tt := range tests {

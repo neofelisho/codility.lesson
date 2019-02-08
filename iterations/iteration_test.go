@@ -10,7 +10,6 @@ func TestBinaryGap(t *testing.T) {
 		args int
 		want int
 	}{
-		// TODO: Add test cases.
 		{"Test for -1", -1, 0},
 		{"Test for 32", 32, 0},
 		{"Test for 15", 15, 0},

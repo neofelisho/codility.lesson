@@ -11,7 +11,6 @@ func TestPermMissingElem(t *testing.T) {
 		args args
 		want int
 	}{
-		// TODO: Add test cases.
 		{"Test 1", args{[]int{1, 2, 3, 5, 6}}, 4},
 		{"Empty and single", args{[]int{2}}, 1},
 	}
